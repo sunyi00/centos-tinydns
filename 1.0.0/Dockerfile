@@ -20,9 +20,6 @@ RUN mkdir -p /root/dns \
     && cd ../djbdns-1.05 \
     && echo gcc -O2 -include /usr/include/errno.h > conf-cc \
     && make setup check \
-    && cd / \
-    && rm -rf /root/dns \
-    && rm -rf /package \
     && useradd -s /bin/false tinydns \
     && useradd -s /bin/false axfrdns \
     && useradd -s /bin/false dnslog \
